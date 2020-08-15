@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>YelpCamp</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="/stylesheets/main.css">
+    </head>
+    <body>
+
+      <!-- NAVBAR -->
+      <nav class="navbar navbar-default">
+          <div class="container-fluid">
+              <div class="navbar-header">
+                  <a href="/" class="navbar-brand">YelpCamp</a>
+              </div>
+              <!-- <div class="collapse navbar-collapse"> -->
+                   <!-- <div class="nav navbar-nav navbar-right"> -->
+                    <% if(!currentUser){ %>
+                      <a href="/login">Login</a>
+                      <a href="/register">Sign Up</a>
+                    <% } else{ %>
+                      <a href="#">Signed in as <%= currentUser.username %></a>
+                      <a href="/logout">Logout</a>
+                    <% }; %>
+                   <!-- </div> -->
+              <!-- </div> -->
+          </div>
+      </nav>
+
+<div class="container">
+  <% if(error && error.length > 0){ %>  <!-- because error isn't undefined, error always exist -->
+    <div class="alert alert-danger" role="alert">
+        <%= error %>
+    </div>
+  <% } %>
+  <% if(success && success.length > 0){ %>
+    <div class="alert alert-success" role="alert">
+        <%= success %>
+    </div>
+  <% } %>
+</div>
+
+      <!-- CONTAINER -->
+      <div class="container">
+          <header class="jumbotron">
+              <div class="container">
+                  <h1>Welcome to YelpCamp!</h1>
+                  <p>View our hand-picked campgrounds from all over the world</p>
+                  <p>
+                      <a class="btn btn-primary btn-large" href="/campgrounds/new">Add new Campground</a>
+                  </p>
+              </div>
+           </header>
+      </div>

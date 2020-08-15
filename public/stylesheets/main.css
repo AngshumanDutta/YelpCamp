@@ -1,0 +1,35 @@
+/* .logins{
+  display: inline;
+} */
+
+.form-control{
+  margin-top: 2.5em;
+  margin-bottom: 2.5em;
+}
+
+ /* /campgrounds/:id page */
+.thumbnail img{
+  width: 100%;
+}
+.thumbnail{
+  padding: 0;
+}
+.thumbnail .caption{
+  padding: 9px;
+}
+
+ /* /campgrounds page */
+.img-thumbnail img{
+  width: 100%;
+}
+.img-thumbnail{
+  padding: 0;
+}
+
+.inlineElement{
+  display: inline;
+}
+
+#delete-form{
+  display: inline;
+}
